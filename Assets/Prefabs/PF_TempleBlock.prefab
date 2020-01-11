@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5878982653737827523}
   - component: {fileID: 7871297872956490866}
   m_Layer: 0
-  m_Name: TempleBlock
+  m_Name: PF_TempleBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ead091b44fa3f3d4b96f5bb7fec991f6, type: 2}
+  - {fileID: 2100000, guid: 432177e21dad0284492138de3570378e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

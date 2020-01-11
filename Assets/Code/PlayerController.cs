@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y > initialY)
+        if(transform.position.y >= initialY)
         {
             //TODO: All the inputs should be a tile size worth of movement
             if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -46,6 +46,6 @@ public class PlayerController : MonoBehaviour
     }
     void Respawn()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("SC_Level1");
     }
 }
