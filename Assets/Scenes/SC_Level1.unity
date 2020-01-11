@@ -2124,6 +2124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e7f11833439ae14dbc6410c73254f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  csvFile: {fileID: 4900000, guid: c8d65f23f080d324398410a821049167, type: 3}
   tilePrefab: {fileID: 4900939906476134224, guid: f42fa3711faf9be44baa70e829d4d3b4,
     type: 3}
   Height: 10
