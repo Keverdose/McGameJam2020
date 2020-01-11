@@ -29,25 +29,36 @@ public class PlayerController : MonoBehaviour
             {
                 movementDirection.z = 1;
                 // transform.Translate(0, 0, 1);
+
+                // Check if there are any obstacle 
+                Move(movementDirection);
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 movementDirection.z = -1;
                 // transform.Translate(0, 0, -1);
+
+                // Check if there are any obstacle 
+                Move(movementDirection);
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 movementDirection.x = -1;
                 //transform.Translate(-1, 0, 0);
+
+                // Check if there are any obstacle 
+                Move(movementDirection);
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 movementDirection.x = 1;
                 //transform.Translate(1, 0, 0);
+
+                // Check if there are any obstacle 
+                Move(movementDirection);
             }
 
-            // Check if there are any obstacle 
-            Move(movementDirection);
+            
             
 
         }
@@ -75,10 +86,8 @@ public class PlayerController : MonoBehaviour
             // Check for a tile below you to determine whether we can move or not
             // Walking into the void or falling tile should block all further movement
             RaycastHit hit;
-            Physics.Raycast(transform.position, -Vector3.up, out hit);
-
-            if (hit.distance > distanceToTile) 
-            {
+            
+            if (!Physics.Raycast(transform.position, -Vector3.up, out hit) || hit.distance > distanceToTile) {
                 return false;
             }
 
