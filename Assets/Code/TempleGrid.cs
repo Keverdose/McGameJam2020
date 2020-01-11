@@ -3,22 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+
 public class TempleGrid : MonoBehaviour
 {
     [SerializeField]
     public TextAsset csvFile;
 
-    public List<List<GameObject>> grid;
+	public List<GameObject> blockTypes;
+	public List<List<GameObject>> grid;
     public GameObject tilePrefab;
-    public int Height;
+	public int Height;
     public int Length;
     public int TileSize;
 
-    // Start is called before the first frame update
-    void Start()
+
+	
+
+	// Start is called before the first frame update
+	void Start()
     {
 		string[,] importGrid = SplitCsvGrid(csvFile.text);
-		Height = importGrid.GetUpperBound(1);
+		Height = importGrid.GetUpperBound(1) - 1;
 		Length = importGrid.GetUpperBound(0) - 1;
 		//Quick implementation of the grid
 
@@ -29,8 +34,46 @@ public class TempleGrid : MonoBehaviour
 		    for (int j = 0; j < Length; j++)
 		    {
 		        Vector3 gridOffset = new Vector3(transform.position.x, 0, transform.position.z);
-		        GameObject tile = (GameObject)Instantiate(tilePrefab, new Vector3(j, 0, Length - i) + gridOffset, Quaternion.identity);
-		        grid[i].Add(tile);
+				GameObject tile;
+				string ch = importGrid[j, i];
+				Vector3 tilePosition = new Vector3(j, 0, Length - i - 1) + gridOffset;
+
+				// Empty block type
+				if (ch == "0")
+                {
+					 tile = (GameObject)Instantiate(blockTypes[0], tilePosition, Quaternion.identity);
+				}
+				// Fire block type
+				else if (ch == "f")
+				{
+					tile = (GameObject)Instantiate(blockTypes[1], tilePosition, Quaternion.identity);
+				}
+				// Arrow/Rolling boulder block type
+				else if (ch == "a")
+				{
+					tile = (GameObject)Instantiate(blockTypes[2], tilePosition, Quaternion.identity);
+				}
+				// Static Boulder block type
+				else if (ch == "r")
+				{
+					tile = (GameObject)Instantiate(blockTypes[3], tilePosition, Quaternion.identity);
+				}
+				// Start block type
+				else if (ch == "S")
+				{
+					tile = (GameObject)Instantiate(blockTypes[4], tilePosition, Quaternion.identity);
+				}
+				// End block type
+				else if (ch == "E")
+				{
+					tile = (GameObject)Instantiate(blockTypes[5], tilePosition, Quaternion.identity);
+				} else
+                {
+					tile = (GameObject)Instantiate(blockTypes[0], tilePosition, Quaternion.identity);
+				}
+
+
+				grid[i].Add(tile);
 		    }
 		    grid.Add(grid[i]);
 		}
