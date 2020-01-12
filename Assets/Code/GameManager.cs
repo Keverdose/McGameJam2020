@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Vector3 offset = new Vector3(0, 2, 0);
+        player.transform.position = grid.startPosition + offset;
     }
 
     // Update is called once per frame

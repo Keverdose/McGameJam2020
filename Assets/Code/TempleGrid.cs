@@ -20,6 +20,7 @@ public class TempleGrid : MonoBehaviour
 	public int Height;
     public int Length;
     public int TileSize;
+	public Vector3 startPosition;
 
 
 	
@@ -81,6 +82,7 @@ public class TempleGrid : MonoBehaviour
 				else if (ch == "S")
 				{
 					tile = (GameObject)Instantiate(startTilePrefab, tilePosition, Quaternion.identity);
+					startPosition = tilePosition;
 				}
 				// End block type
 				else if (ch == "E")
