@@ -14,8 +14,7 @@ public class FireBlockType : TempleBlock
     // Start is called before the first frame update
     void Start()
     {
-        base.Start();
-
+        base.Start();        
         firesystem1 = fire1.GetComponent<ParticleSystem>();
         firesystem2 = fire2.GetComponent<ParticleSystem>();
 
@@ -23,12 +22,6 @@ public class FireBlockType : TempleBlock
         fire1.GetComponent<BoxCollider>().enabled = true;
         firesystem2.Stop();
         fire2.GetComponent<BoxCollider>().enabled = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public override void TickObject()

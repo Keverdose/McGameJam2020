@@ -37,28 +37,51 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene(currentScene);
     }
 
+   
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Arrow") || (collision.gameObject.CompareTag("Fire")))
+        {
+            Invoke("Respawn", 0.1f);
+        }
+    }
 
     // Given a direction,
     public bool Move(Vector3 moveDirection)     
     {
         Vector3 currentPosition = new Vector3(transform.position.x, transform.position.y / 2, transform.position.z);
+        RaycastHit hitFront;
 
         // No Collision, proceed with the movement
-        if (!Physics.Raycast(currentPosition, moveDirection, 1)) 
+        if (!Physics.Raycast(currentPosition, moveDirection, out hitFront, 1))
         {
-            
+            //if(!hitFront.transform.gameObject.CompareTag("Fire")) && (!hitFront.transform.gameObject.CompareTag("Arrow"))
+
             // Check for a tile below you to determine whether we can move or not
             // Walking into the void or falling tile should block all further movement
             RaycastHit hit;
-            
-            if (!Physics.Raycast(transform.position, -Vector3.up, out hit) || hit.distance > distanceToTile) {
+
+            if (!Physics.Raycast(transform.position, -Vector3.up, out hit) || hit.distance > distanceToTile)
+            {
+
                 return false;
+
+
             }
 
             transform.Translate(moveDirection);
             Quaternion rotation = Quaternion.LookRotation(moveDirection, Vector3.up);
             mesh.transform.rotation = rotation;
             return true;
+        }
+
+        else
+        {
+            if ((hitFront.transform.tag != "Fire") && (hitFront.transform.tag != "Arrow"))
+            {
+                return true;
+            }
         }
         
         return false;

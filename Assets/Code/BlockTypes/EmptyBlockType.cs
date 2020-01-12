@@ -18,7 +18,6 @@ public class EmptyBlockType : TempleBlock
 
     public override void TickObject()
     {
-            
     }
 }
 
