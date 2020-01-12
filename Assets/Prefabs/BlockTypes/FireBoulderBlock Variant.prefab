@@ -214,6 +214,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1239761528775229202}
     m_Modifications:
+    - target: {fileID: 4369329200773956523, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 4369329201493877917, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fire
+      objectReference: {fileID: 0}
     - target: {fileID: 4370619935019640338, guid: 999f6abbce441a04e80ae3b317e18c38,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -274,7 +284,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireSpawner
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4747309504802037414, guid: 999f6abbce441a04e80ae3b317e18c38, type: 3}
+    - {fileID: 4747309505725381008, guid: 999f6abbce441a04e80ae3b317e18c38, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 999f6abbce441a04e80ae3b317e18c38, type: 3}
 --- !u!4 &5527834753373401710 stripped
 Transform:
