@@ -10,7 +10,6 @@ public class StaticBoulderRockType : TempleBlock
     void Start()
     {
         base.Start();
-        print("static boulder block start");
     }
 
     // Update is called once per frame
@@ -21,6 +20,5 @@ public class StaticBoulderRockType : TempleBlock
 
     public override void TickObject()
     {
-        print("Tick static boulder");
     }
 }

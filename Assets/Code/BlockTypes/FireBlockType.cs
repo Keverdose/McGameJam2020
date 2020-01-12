@@ -15,7 +15,6 @@ public class FireBlockType : TempleBlock
     void Start()
     {
         base.Start();        
-
         firesystem1 = fire1.GetComponent<ParticleSystem>();
         firesystem2 = fire2.GetComponent<ParticleSystem>();
 
