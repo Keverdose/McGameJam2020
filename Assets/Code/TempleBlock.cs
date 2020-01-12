@@ -5,6 +5,8 @@ using UnityEngine;
 public class TempleBlock : MonoBehaviour
 {
     Rigidbody rb;
+   
+    public GameObject tileEffect;
 
     float playerOnTileTimerLimit = 4.0f;
     float playerOnTileTimer = 0.0f;
@@ -45,6 +47,8 @@ public class TempleBlock : MonoBehaviour
         {
             isPlayerOnTile = false;
             DestroyTile();
+
+            Instantiate(tileEffect, this.gameObject.transform.position + new Vector3(0.0f, 1.0f, 0.0f), Quaternion.identity);
         }
     }
 
