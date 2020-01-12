@@ -8,7 +8,6 @@ public class StartBlockType : TempleBlock
     void Start()
     {
         base.Start();
-        print("start block start");
     }
 
     // Update is called once per frame
@@ -19,6 +18,6 @@ public class StartBlockType : TempleBlock
 
     public override void TickObject()
     {
-        print("Tick start");
+        
     }
 }

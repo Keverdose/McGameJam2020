@@ -33,7 +33,8 @@ public class PlayerController : MonoBehaviour
     }
     void Respawn()
     {
-        SceneManager.LoadScene("SC_Level1");
+        string currentScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentScene);
     }
 
 

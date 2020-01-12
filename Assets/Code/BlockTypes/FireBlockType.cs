@@ -15,7 +15,6 @@ public class FireBlockType : TempleBlock
     void Start()
     {
         base.Start();
-        print("fire block start");
 
         firesystem1 = fire1.GetComponent<ParticleSystem>();
         firesystem2 = fire2.GetComponent<ParticleSystem>();
@@ -35,7 +34,6 @@ public class FireBlockType : TempleBlock
     public override void TickObject()
     {
         tick++;
-        print("Tick fire");
         if ((tick > 1)&&(tick % 2 == 1))
         {
             swapFires();
