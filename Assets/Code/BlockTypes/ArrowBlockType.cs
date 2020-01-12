@@ -39,6 +39,8 @@ public class ArrowBlockType : TempleBlock
 
     public void InstantiateArrow()
     {
+        AudioSource sound = this.GetComponent<AudioSource>();
+        sound.Play();
         Vector3 startingPos = this.transform.position +  new Vector3(0,1,0);
         GameObject arrow = Instantiate(ArrowPrefab, startingPos, this.transform.rotation);
         ArrowsInstantiated.Add(arrow);

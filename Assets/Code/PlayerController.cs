@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public GameObject UITab;
     //TODO: Needs to know the grid values
 
     float initialY;
@@ -27,23 +29,30 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            //TODO: Dead
-            Invoke("Respawn", 2.0f);
+            Die();
         }
     }
-    void Respawn()
+    public void Respawn()
     {
+        Time.timeScale = 1;
+        UITab.SetActive(false); 
         string currentScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentScene);
+    }
+
+    public void Die()
+    {
+        Time.timeScale = 0;
+        UITab.SetActive(true);
     }
 
    
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Arrow") || (collision.gameObject.CompareTag("Fire")))
+        if (collision.gameObject.CompareTag("Fire"))
         {
-            Invoke("Respawn", 0.1f);
+            Invoke("Die", 0.1f);
         }
     }
 
