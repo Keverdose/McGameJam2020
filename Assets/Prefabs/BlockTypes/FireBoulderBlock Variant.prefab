@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3194571542410243667}
   m_Layer: 0
   m_Name: FireBoulderBlock Variant
-  m_TagString: Untagged
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,6 +283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FireSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374865440950383975, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4747309504802037414, guid: 999f6abbce441a04e80ae3b317e18c38, type: 3}

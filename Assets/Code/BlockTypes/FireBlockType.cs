@@ -16,8 +16,6 @@ public class FireBlockType : TempleBlock
     {
         base.Start();
         print("fire block start");
-        
-        
 
         firesystem1 = fire1.GetComponent<ParticleSystem>();
         firesystem2 = fire2.GetComponent<ParticleSystem>();
@@ -47,26 +45,19 @@ public class FireBlockType : TempleBlock
 
     public void swapFires()
     {
-        if (firesystem1.isPlaying)
+        if (firesystem1.isPlaying || firesystem2.isStopped)
         {
             firesystem1.Stop();
             fire1.GetComponent<BoxCollider>().enabled = false;
+            firesystem2.Play();
+            fire2.GetComponent<BoxCollider>().enabled = true;
         }
-        if (firesystem1.isStopped)
-        {
-            firesystem1.Play();
-            fire1.GetComponent<BoxCollider>().enabled = true;
-        }
-
-        if (firesystem2.isPlaying)
+        else
         {
             firesystem2.Stop();
             fire2.GetComponent<BoxCollider>().enabled = false;
-        }
-        if (firesystem2.isStopped)
-        {
-            firesystem2.Play();
-            fire2.GetComponent<BoxCollider>().enabled = true;
+            firesystem1.Play();
+            fire1.GetComponent<BoxCollider>().enabled = true;
         }
     }
 }
