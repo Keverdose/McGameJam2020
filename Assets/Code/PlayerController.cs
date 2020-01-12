@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
 
         else
         {
-            if ((hitFront.transform.tag != "Fire") && (hitFront.transform.tag != "Arrow"))
+            if ((hitFront.transform.tag != "Fire") || (hitFront.transform.tag != "Arrow"))
             {
                 return true;
             }
