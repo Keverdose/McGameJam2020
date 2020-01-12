@@ -17,7 +17,7 @@ MonoImporter:
       type: 3}
   - staticBoulderTilePrefab: {fileID: 8816315763496710284, guid: 045c5ac76653b5644a8cf309abb8e4b2,
       type: 3}
-  executionOrder: 0
+  executionOrder: 100
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 

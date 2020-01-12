@@ -21,7 +21,7 @@ public class TempleGrid : MonoBehaviour
     public int Length;
     public int TileSize;
 
-
+    public Vector3 startPosition;
 	
 
 	// Start is called before the first frame update
@@ -81,6 +81,7 @@ public class TempleGrid : MonoBehaviour
 				else if (ch == "S")
 				{
 					tile = (GameObject)Instantiate(startTilePrefab, tilePosition, Quaternion.identity);
+                    startPosition = tilePosition;
 				}
 				// End block type
 				else if (ch == "E")
