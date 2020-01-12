@@ -25,7 +25,7 @@ public class ArrowBlockType : TempleBlock
         {
             if (arrow != null)
             {
-                arrow.transform.Translate(this.transform.forward);
+                arrow.transform.Translate(new Vector3(0,0,1));
                 if (arrow.transform.position.x > 7.0f || arrow.transform.position.z > 7.0f ||
                     arrow.transform.position.x < -7.0f || arrow.transform.position.z < -7.0f)
                 {
@@ -40,7 +40,7 @@ public class ArrowBlockType : TempleBlock
     public void InstantiateArrow()
     {
         Vector3 startingPos = this.transform.position +  new Vector3(0,1,0);
-        GameObject arrow = Instantiate(ArrowPrefab, startingPos, Quaternion.identity);
+        GameObject arrow = Instantiate(ArrowPrefab, startingPos, this.transform.rotation);
         ArrowsInstantiated.Add(arrow);
     }
 }

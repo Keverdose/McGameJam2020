@@ -8,13 +8,15 @@ public class PlayerController : MonoBehaviour
     //TODO: Needs to know the grid values
 
     float initialY;
-    float distanceToTile; 
+    float distanceToTile;
+    GameObject mesh;
 
     // Start is called before the first frame update
     void Start()
     {
         initialY = transform.position.y;
         distanceToTile = 1.125f;
+        mesh = transform.GetChild(0).gameObject;//quick hack
     }
 
     // Update is called once per frame
@@ -53,6 +55,8 @@ public class PlayerController : MonoBehaviour
             }
 
             transform.Translate(moveDirection);
+            Quaternion rotation = Quaternion.LookRotation(moveDirection, Vector3.up);
+            mesh.transform.rotation = rotation;
             return true;
         }
         
