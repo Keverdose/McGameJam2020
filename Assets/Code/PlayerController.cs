@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
 
 
     // Given a direction,
-    bool Move(Vector3 moveDirection)     
+    public bool Move(Vector3 moveDirection)     
     {
         Vector3 currentPosition = new Vector3(transform.position.x, transform.position.y / 2, transform.position.z);
 

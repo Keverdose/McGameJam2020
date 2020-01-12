@@ -89,36 +89,15 @@ public class TempleGrid : MonoBehaviour
     {
         
     }
-	void TickGrid()
+	public void TickGrid()
 	{
-		int i = 0;
-		int count = grid.Count;
-		print("row count" + count);
 		foreach (List<GameObject> row in grid)
 		{
 			foreach (GameObject obj in row)
             {
 				obj.GetComponent<TempleBlock>().TickObject();
-				print("tick grid" + i++);
 			}
 		}
-	}
-
-	// outputs the content of a 2D array, useful for checking the importer
-	static public void DebugOutputGrid(string[,] grid)
-	{
-		string textOutput = "";
-		for (int y = 0; y < grid.GetUpperBound(1); y++)
-		{
-			for (int x = 0; x < grid.GetUpperBound(0); x++)
-			{
-
-				textOutput += grid[x, y];
-				textOutput += "|";
-			}
-			textOutput += "\n";
-		}
-		Debug.Log(textOutput);
 	}
 
 	// splits a CSV file into a 2D string array
