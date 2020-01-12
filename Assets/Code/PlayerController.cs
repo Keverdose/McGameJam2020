@@ -8,17 +8,19 @@ public class PlayerController : MonoBehaviour
     //TODO: Needs to know the grid values
 
     float initialY;
+    float distanceToTile; 
 
     // Start is called before the first frame update
     void Start()
     {
         initialY = transform.position.y;
+        distanceToTile = 1.125f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y >= initialY)
+        if (transform.position.y >= initialY)
         {
             Vector3 movementDirection = new Vector3(0, 0, 0);
 
@@ -27,25 +29,36 @@ public class PlayerController : MonoBehaviour
             {
                 movementDirection.z = 1;
                 // transform.Translate(0, 0, 1);
+
+                // Check if there are any obstacle 
+                Move(movementDirection);
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 movementDirection.z = -1;
                 // transform.Translate(0, 0, -1);
+
+                // Check if there are any obstacle 
+                Move(movementDirection);
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 movementDirection.x = -1;
                 //transform.Translate(-1, 0, 0);
+
+                // Check if there are any obstacle 
+                Move(movementDirection);
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 movementDirection.x = 1;
                 //transform.Translate(1, 0, 0);
+
+                // Check if there are any obstacle 
+                Move(movementDirection);
             }
 
-            // Check if there are any obstacle 
-            Move(movementDirection);
+            
             
 
         }
@@ -69,10 +82,20 @@ public class PlayerController : MonoBehaviour
         // No Collision, proceed with the movement
         if (!Physics.Raycast(currentPosition, moveDirection, 1)) 
         {
+            
+            // Check for a tile below you to determine whether we can move or not
+            // Walking into the void or falling tile should block all further movement
+            RaycastHit hit;
+            
+            if (!Physics.Raycast(transform.position, -Vector3.up, out hit) || hit.distance > distanceToTile) {
+                return false;
+            }
+
             transform.Translate(moveDirection);
             return true;
         }
-
+        
         return false;
     }
+
 }

@@ -1,89 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6804504488686409623
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1161896507795928206}
-    m_Modifications:
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.113
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.148
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.167
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.13634
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.98040736
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.13634
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 56bd14e0048a4dd48a5413b8c3d662e9,
-        type: 3}
-      propertyPath: m_Name
-      value: mobile_floor_divider_hub
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 56bd14e0048a4dd48a5413b8c3d662e9, type: 3}
 --- !u!1001 &9104355011649649929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151,17 +67,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9072689252729587335, guid: b9ed01d1d6bf8d147a84e9d639247935,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: 964cd68e6abc90b4c9c3603689863b9e,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9ed01d1d6bf8d147a84e9d639247935, type: 3}
---- !u!4 &1161896507795928206 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7946258575106361735, guid: b9ed01d1d6bf8d147a84e9d639247935,
-    type: 3}
-  m_PrefabInstance: {fileID: 9104355011649649929}
-  m_PrefabAsset: {fileID: 0}

@@ -8,6 +8,12 @@ using UnityEngine;
 public class TempleBlock : MonoBehaviour
 {
     Rigidbody rb;
+   
+    public GameObject tileEffect;
+
+    float playerOnTileTimerLimit = 4.0f;
+    float playerOnTileTimer = 0.0f;
+    bool isPlayerOnTile; 
 
     public virtual void TickObject()
     {
@@ -18,12 +24,29 @@ public class TempleBlock : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        isPlayerOnTile = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(isPlayerOnTile) 
+        {
+            playerOnTileTimer += Time.deltaTime;
+
+            if(playerOnTileTimer > playerOnTileTimerLimit) 
+            {
+                DestroyTile();
+            }
+        }
+    }
+
+    private void OnCollisionEnter(Collision other) 
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            isPlayerOnTile = true;
+        }
     }
 
     
@@ -32,8 +55,16 @@ public class TempleBlock : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            rb.isKinematic = false;
-            Destroy(gameObject,1f);
+            isPlayerOnTile = false;
+            DestroyTile();
+
+            Instantiate(tileEffect, this.gameObject.transform.position + new Vector3(0.0f, 1.0f, 0.0f), Quaternion.identity);
         }
+    }
+
+    private void DestroyTile() 
+    {
+        rb.isKinematic = false;
+        Destroy(gameObject, 1f);
     }
 }
