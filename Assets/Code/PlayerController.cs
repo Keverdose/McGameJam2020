@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public GameObject UITab;
     //TODO: Needs to know the grid values
 
     float initialY;
@@ -27,15 +29,20 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            //TODO: Dead
-            Invoke("Respawn", 2.0f);
+            Die();
         }
     }
     void Respawn()
     {
+        UITab.SetActive(false); 
         SceneManager.LoadScene("SC_Level1");
     }
 
+    public void Die()
+    {
+        UITab.SetActive(true);
+
+    }
 
     // Given a direction,
     public bool Move(Vector3 moveDirection)     
