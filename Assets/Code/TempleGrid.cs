@@ -56,9 +56,21 @@ public class TempleGrid : MonoBehaviour
 					tile = (GameObject)Instantiate(fireTilePrefab, tilePosition, Quaternion.identity);
 				}
 				// Arrow/Rolling boulder block type
-				else if (ch == "a")
+				else if (ch == ">")
+				{
+					tile = (GameObject)Instantiate(arrowTilePrefab, tilePosition, Quaternion.AngleAxis(90, Vector3.up));
+				}
+				else if (ch == "<")
+				{
+					tile = (GameObject)Instantiate(arrowTilePrefab, tilePosition, Quaternion.AngleAxis(270, Vector3.up));
+				}
+				else if (ch == "^")
 				{
 					tile = (GameObject)Instantiate(arrowTilePrefab, tilePosition, Quaternion.identity);
+				}
+				else if (ch == "v")
+				{
+					tile = (GameObject)Instantiate(arrowTilePrefab, tilePosition, Quaternion.AngleAxis(180, Vector3.up));
 				}
 				// Static Boulder block type
 				else if (ch == "r")
