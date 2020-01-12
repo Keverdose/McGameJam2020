@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class StaticBoulderRockType : TempleBlock
 {
+    GameObject attachedStaticBoulder; 
+
     // Start is called before the first frame update
     void Start()
     {
+        base.Start();
         print("static boulder block start");
     }
 

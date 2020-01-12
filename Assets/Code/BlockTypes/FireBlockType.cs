@@ -7,6 +7,7 @@ public class FireBlockType : TempleBlock
     // Start is called before the first frame update
     void Start()
     {
+        base.Start();
         print("fire block start");
     }
 
