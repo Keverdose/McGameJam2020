@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44329983, g: 0.49255377, b: 0.57220805, a: 1}
+  m_IndirectSpecularColor: {r: 0.4432999, g: 0.4925537, b: 0.5722081, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -675,8 +675,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 54799393}
-        m_MethodName: ButtonStart
+      - m_Target: {fileID: 1103186391}
+        m_MethodName: Respawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3715,6 +3715,7 @@ MonoBehaviour:
   Height: 10
   Length: 10
   TileSize: 20
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &1935052533
 Transform:
   m_ObjectHideFlags: 0
