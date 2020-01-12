@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         {
             grid.TickGrid();
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow) && player.Move(new Vector3(1, 0, 0)))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && player.Move(new Vector3(-1, 0, 0)))
         {
             grid.TickGrid();
         }

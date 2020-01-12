@@ -95,7 +95,8 @@ public class TempleGrid : MonoBehaviour
 		{
 			foreach (GameObject obj in row)
             {
-				obj.GetComponent<TempleBlock>().TickObject();
+				if(obj)
+					obj.GetComponent<TempleBlock>().TickObject();
 			}
 		}
 	}

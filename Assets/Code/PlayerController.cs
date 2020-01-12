@@ -22,45 +22,6 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.position.y >= initialY)
         {
-            Vector3 movementDirection = new Vector3(0, 0, 0);
-
-            //TODO: All the inputs should be a tile size worth of movement
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                movementDirection.z = 1;
-                // transform.Translate(0, 0, 1);
-
-                // Check if there are any obstacle 
-                Move(movementDirection);
-            }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                movementDirection.z = -1;
-                // transform.Translate(0, 0, -1);
-
-                // Check if there are any obstacle 
-                Move(movementDirection);
-            }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                movementDirection.x = -1;
-                //transform.Translate(-1, 0, 0);
-
-                // Check if there are any obstacle 
-                Move(movementDirection);
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                movementDirection.x = 1;
-                //transform.Translate(1, 0, 0);
-
-                // Check if there are any obstacle 
-                Move(movementDirection);
-            }
-
-            
-            
-
         }
         else
         {
