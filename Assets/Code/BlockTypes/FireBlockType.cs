@@ -38,7 +38,7 @@ public class FireBlockType : TempleBlock
     {
         tick++;
         print("Tick fire");
-        if (tick % 2 == 1)
+        if ((tick > 1)&&(tick % 2 == 1))
         {
             swapFires();
         }
