@@ -13,7 +13,6 @@ public class ArrowBlockType : TempleBlock
     void Start()
     {
         base.Start();
-        print("arrow block start");
     }
 
     public override void TickObject()
@@ -24,15 +23,17 @@ public class ArrowBlockType : TempleBlock
         }
         foreach(GameObject arrow in ArrowsInstantiated)
         {
-            print(this.transform.forward);
-            arrow.transform.Translate(this.transform.forward);
-            if(arrow.transform.position.x > 7.0f || arrow.transform.position.z > 7.0f ||
-                arrow.transform.position.x < -7.0f || arrow.transform.position.z < -7.0f)
+            if (arrow != null)
             {
-                ArrowsInstantiated.Remove(arrow);
-                Destroy(arrow);
+                arrow.transform.Translate(this.transform.forward);
+                if (arrow.transform.position.x > 7.0f || arrow.transform.position.z > 7.0f ||
+                    arrow.transform.position.x < -7.0f || arrow.transform.position.z < -7.0f)
+                {
+                    Destroy(arrow);
+                }
             }
         }
+        ArrowsInstantiated.RemoveAll(x => x == null);
         tickCount++;
     }
 
