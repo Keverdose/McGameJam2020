@@ -17,7 +17,7 @@ public class ArrowBlockType : TempleBlock
 
     public override void TickObject()
     {
-        if(tickCount % 4 == 1)
+        if(tickCount % 3 == 1)
         {
             InstantiateArrow();
         }
