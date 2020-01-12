@@ -36,6 +36,13 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene("SC_Level1");
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Arrow") || (collision.gameObject.CompareTag("Fire")))
+        {
+            Invoke("Respawn", 0.1f);
+        }
+    }
 
     // Given a direction,
     public bool Move(Vector3 moveDirection)     
