@@ -3,7 +3,20 @@ guid: 0e7f11833439ae14dbc6410c73254f1b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - csvFile: {fileID: 4900000, guid: c8d65f23f080d324398410a821049167, type: 3}
+  - emptyTilePrefab: {fileID: 4469975717009387692, guid: 827d7bd3d4969a64ba15727188378235,
+      type: 3}
+  - startTilePrefab: {fileID: 4630350059388706034, guid: 5d960d6cfc737b64e986a14e48a0abcc,
+      type: 3}
+  - endTilePrefab: {fileID: 8807895115965733094, guid: bf2442ef407e33c419654f22d61ffd96,
+      type: 3}
+  - fireTilePrefab: {fileID: 2642995332234123919, guid: e36b415358a9ab148a54780d2a007c23,
+      type: 3}
+  - arrowTilePrefab: {fileID: 5027250335968937600, guid: 5b43c5a2c8713e947872534fe7fc6572,
+      type: 3}
+  - staticBoulderTilePrefab: {fileID: 8816315763496710284, guid: 045c5ac76653b5644a8cf309abb8e4b2,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
