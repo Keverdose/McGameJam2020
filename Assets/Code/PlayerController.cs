@@ -33,9 +33,17 @@ public class PlayerController : MonoBehaviour
     }
     void Respawn()
     {
-        SceneManager.LoadScene("SC_Level1");
+        string currentScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentScene);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Arrow") || (collision.gameObject.CompareTag("Fire")))
+        {
+            Invoke("Respawn", 0.1f);
+        }
+    }
 
     // Given a direction,
     public bool Move(Vector3 moveDirection)     
