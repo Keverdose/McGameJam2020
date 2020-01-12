@@ -2125,14 +2125,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   csvFile: {fileID: 4900000, guid: c8d65f23f080d324398410a821049167, type: 3}
-  blockTypes:
-  - {fileID: 4900939906476134224, guid: f42fa3711faf9be44baa70e829d4d3b4, type: 3}
-  - {fileID: 4204823034276049497, guid: b9ed01d1d6bf8d147a84e9d639247935, type: 3}
-  - {fileID: 8070194015926393626, guid: ce3b3f571355e6944a85a10afbbd0e1f, type: 3}
-  - {fileID: 5993878924416422584, guid: be328ee97faa2c643b581174bcb566e2, type: 3}
-  - {fileID: 4025933187428741585, guid: b16319e657285be478e835bcfff87421, type: 3}
-  - {fileID: 8490847873446068233, guid: 7eed27dd076dab54b87ea5db1f590cde, type: 3}
-  tilePrefab: {fileID: 4900939906476134224, guid: f42fa3711faf9be44baa70e829d4d3b4,
+  emptyTilePrefab: {fileID: 4469975717009387692, guid: 827d7bd3d4969a64ba15727188378235,
+    type: 3}
+  startTilePrefab: {fileID: 4630350059388706034, guid: 5d960d6cfc737b64e986a14e48a0abcc,
+    type: 3}
+  endTilePrefab: {fileID: 8807895115965733094, guid: bf2442ef407e33c419654f22d61ffd96,
+    type: 3}
+  fireTilePrefab: {fileID: 2642995332234123919, guid: e36b415358a9ab148a54780d2a007c23,
+    type: 3}
+  arrowTilePrefab: {fileID: 5027250335968937600, guid: 5b43c5a2c8713e947872534fe7fc6572,
+    type: 3}
+  staticBoulderTilePrefab: {fileID: 8816315763496710284, guid: 045c5ac76653b5644a8cf309abb8e4b2,
     type: 3}
   Height: 10
   Length: 10

@@ -2,15 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
 public class TempleBlock : MonoBehaviour
 {
     Rigidbody rb;
+
+    public virtual void TickObject()
+    {
+
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
     }
 
     // Update is called once per frame
@@ -18,6 +25,8 @@ public class TempleBlock : MonoBehaviour
     {
         
     }
+
+    
 
     private void OnCollisionExit(Collision other)
     {

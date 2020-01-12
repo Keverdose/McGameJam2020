@@ -9,9 +9,14 @@ public class TempleGrid : MonoBehaviour
     [SerializeField]
     public TextAsset csvFile;
 
-	public List<GameObject> blockTypes;
+	
 	public List<List<GameObject>> grid;
-    public GameObject tilePrefab;
+    public GameObject emptyTilePrefab;
+	public GameObject startTilePrefab;
+	public GameObject endTilePrefab;
+	public GameObject fireTilePrefab;
+	public GameObject arrowTilePrefab;
+	public GameObject staticBoulderTilePrefab;
 	public int Height;
     public int Length;
     public int TileSize;
@@ -30,7 +35,9 @@ public class TempleGrid : MonoBehaviour
 		grid = new List<List<GameObject>>();
 		for (int i = 0; i < Height; i++)	
 		{
+			
 		    grid.Add(new List<GameObject>());
+			var row = grid[i];
 		    for (int j = 0; j < Length; j++)
 		    {
 		        Vector3 gridOffset = new Vector3(transform.position.x, 0, transform.position.z);
@@ -41,42 +48,40 @@ public class TempleGrid : MonoBehaviour
 				// Empty block type
 				if (ch == "0")
                 {
-					 tile = (GameObject)Instantiate(blockTypes[0], tilePosition, Quaternion.identity);
+					 tile = (GameObject)Instantiate(emptyTilePrefab, tilePosition, Quaternion.identity);
 				}
 				// Fire block type
 				else if (ch == "f")
 				{
-					tile = (GameObject)Instantiate(blockTypes[1], tilePosition, Quaternion.identity);
+					tile = (GameObject)Instantiate(fireTilePrefab, tilePosition, Quaternion.identity);
 				}
 				// Arrow/Rolling boulder block type
 				else if (ch == "a")
 				{
-					tile = (GameObject)Instantiate(blockTypes[2], tilePosition, Quaternion.identity);
+					tile = (GameObject)Instantiate(arrowTilePrefab, tilePosition, Quaternion.identity);
 				}
 				// Static Boulder block type
 				else if (ch == "r")
 				{
-					tile = (GameObject)Instantiate(blockTypes[3], tilePosition, Quaternion.identity);
+					tile = (GameObject)Instantiate(staticBoulderTilePrefab, tilePosition, Quaternion.identity);
 				}
 				// Start block type
 				else if (ch == "S")
 				{
-					tile = (GameObject)Instantiate(blockTypes[4], tilePosition, Quaternion.identity);
+					tile = (GameObject)Instantiate(startTilePrefab, tilePosition, Quaternion.identity);
 				}
 				// End block type
 				else if (ch == "E")
 				{
-					tile = (GameObject)Instantiate(blockTypes[5], tilePosition, Quaternion.identity);
+					tile = (GameObject)Instantiate(endTilePrefab, tilePosition, Quaternion.identity);
 				} else
                 {
-					tile = (GameObject)Instantiate(blockTypes[0], tilePosition, Quaternion.identity);
+					tile = (GameObject)Instantiate(emptyTilePrefab, tilePosition, Quaternion.identity);
 				}
-
-
-				grid[i].Add(tile);
+				row.Add(tile);
 		    }
-		    grid.Add(grid[i]);
 		}
+		TickGrid();
 	}
 
     // Update is called once per frame
@@ -84,8 +89,20 @@ public class TempleGrid : MonoBehaviour
     {
         
     }
-
-
+	void TickGrid()
+	{
+		int i = 0;
+		int count = grid.Count;
+		print("row count" + count);
+		foreach (List<GameObject> row in grid)
+		{
+			foreach (GameObject obj in row)
+            {
+				obj.GetComponent<TempleBlock>().TickObject();
+				print("tick grid" + i++);
+			}
+		}
+	}
 
 	// outputs the content of a 2D array, useful for checking the importer
 	static public void DebugOutputGrid(string[,] grid)
