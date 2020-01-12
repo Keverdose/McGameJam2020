@@ -10,14 +10,7 @@ public class StartBlockType : TempleBlock
         base.Start();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public override void TickObject()
     {
-        
     }
 }
