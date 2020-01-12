@@ -9517,7 +9517,6 @@ GameObject:
   - component: {fileID: 4832750714773668}
   - component: {fileID: 198446971744627332}
   - component: {fileID: 199524112731312442}
-  - component: {fileID: 9027003088406383461}
   m_Layer: 0
   m_Name: Magic fire 1
   m_TagString: Untagged
@@ -14263,20 +14262,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &9027003088406383461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537593200154216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6585eb6d96ee26c4a8270ba88086a7e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fire: {fileID: 0}
-  fireSystem: {fileID: 0}
 --- !u!1 &1601297128568620
 GameObject:
   m_ObjectHideFlags: 0
