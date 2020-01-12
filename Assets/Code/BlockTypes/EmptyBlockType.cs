@@ -7,7 +7,6 @@ public class EmptyBlockType : TempleBlock
     // Start is called before the first frame update
     new void Start()
     {
-        print("empty block start");
         base.Start();
     }
 
@@ -19,7 +18,6 @@ public class EmptyBlockType : TempleBlock
 
     public override void TickObject()
     {
-        print("Tick empty");
     }
 }
 

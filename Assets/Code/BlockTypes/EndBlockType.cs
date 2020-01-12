@@ -9,18 +9,10 @@ public class EndBlockType : TempleBlock
     void Start()
     {
         base.Start();
-        print("end block start");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public override void TickObject()
     {
-        print("Tick end");
     }
 
     public void OnCollisionEnter(Collision collision)
