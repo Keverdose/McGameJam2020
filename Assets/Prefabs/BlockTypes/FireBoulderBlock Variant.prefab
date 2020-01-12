@@ -33,6 +33,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5330603165703407404}
+  - {fileID: 5527834753373401710}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -124,6 +125,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileEffect: {fileID: 1965343156803978, guid: aa8d6482d70a23445b4b2a928ed1b845, type: 3}
+  fire1: {fileID: 5526943708758988759}
+  fire2: {fileID: 5526943709481922785}
+  firesystem1: {fileID: 0}
+  firesystem2: {fileID: 0}
 --- !u!1 &5952347114105546659
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,3 +207,90 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1001 &8075340915171349628
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1239761528775229202}
+    m_Modifications:
+    - target: {fileID: 4370619935019640338, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370619935019640338, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370619935019640338, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370619935019640338, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370619935019640338, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370619935019640338, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370619935019640338, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370619935019640338, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370619935019640338, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370619935019640338, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370619935019640338, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370619935019640350, guid: 999f6abbce441a04e80ae3b317e18c38,
+        type: 3}
+      propertyPath: m_Name
+      value: FireSpawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 999f6abbce441a04e80ae3b317e18c38, type: 3}
+--- !u!4 &5527834753373401710 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4370619935019640338, guid: 999f6abbce441a04e80ae3b317e18c38,
+    type: 3}
+  m_PrefabInstance: {fileID: 8075340915171349628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5526943708758988759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4369329200773956523, guid: 999f6abbce441a04e80ae3b317e18c38,
+    type: 3}
+  m_PrefabInstance: {fileID: 8075340915171349628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5526943709481922785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4369329201493877917, guid: 999f6abbce441a04e80ae3b317e18c38,
+    type: 3}
+  m_PrefabInstance: {fileID: 8075340915171349628}
+  m_PrefabAsset: {fileID: 0}
